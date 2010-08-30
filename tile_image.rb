@@ -1,11 +1,4 @@
-#  Author: Anna <tanna22@gmail.com>
-#  Last edited: August 26, 2010
-#
-#	Changes: 
-#	The Tiler itself has been completely re-written.
-#	TileParam is no longer used.
-#	Guilhem's command-line portions remain.
-#
+#  Copyright (c) 2010 Anna <tanna22@gmail.com>
 #  Copyright (c) 2006 Guilhem Vellut <guilhem.vellut+ym4r@gmail.com>
 #  
 #  Permission is hereby granted, free of charge, to any person obtaining a copy of this software
