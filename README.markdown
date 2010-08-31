@@ -5,7 +5,7 @@ imagetiler is a simple command-line and ruby image tiler with support for multip
 
 ## How to use
 
-#### From the command line
+### From the command line
 
 `ruby tile_image.rb -o OUTPUT_DIR -z ZOOM_LEVELS IMAGE_FILE`  
 
@@ -14,7 +14,7 @@ For example
 `ruby tile_image.rb -o ./tiles -z 2..4 ./input_files/map.jpg`
 
 
-#### From ruby
+### From ruby
 
 Install the gem:  
 `gem install imagetiler`
@@ -31,7 +31,7 @@ You can set options two ways:
 or  
 `t.get_tiles(image, :zoom_levels => 2..4)`
 
-Setting options in the get_tiles function sets them for that instance of Tiler.
+If you set an option in get_tiles, that will be the new default for that instance of Tiler.
 
 
 ## Methods
