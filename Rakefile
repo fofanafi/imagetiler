@@ -7,6 +7,7 @@ begin
     gemspec.email = "tanna22@gmail.com"
     gemspec.homepage = "http://github.com/fofanafi/imagetiler"
     gemspec.authors = ["Anna, Guilhem Vellut"]
+		gemspec.add_dependency "rmagick"
   end
 	Jeweler::GemcutterTasks.new
 rescue LoadError

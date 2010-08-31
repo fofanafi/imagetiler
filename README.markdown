@@ -16,7 +16,10 @@ For example
 
 ### From ruby
 
+Install ImageMagick.
+
 Install the gem:  
+`gem install rmagick`  
 `gem install imagetiler`
 
 Use it in your code:  
@@ -34,11 +37,21 @@ or
 If you set an option in get_tiles, that will be the new default for that instance of Tiler.
 
 
+## Options
+
+`zoom_levels` : Zoom level 0 shows the entire image as one 256x256 tile. Subsequent zoom levels double both the horizontal and vertical sides. Default is 0..4  
+`output_dir` : Defaults to the current directory. Don't include the ending '/'  
+`bg_color` : The background fill color, transparent by default.  
+`autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
+`format` : The format for the output, defaults to 'jpg'. Can be png, gif, or anything that ImageMagick supports. 
+`prefix` : Prefix for the output files. Defaults to 'tile'
+
+
 ## Methods
 
 `make_tiles(image_source, opts)`  
 
-`calc_native_res_zoom` : Calculates the zoom level closest to native resolution. Returns a float for the zoom -- so, use zoom.round if you want the closest zoom level, for example
+`calc_native_res_zoom` : Calculates the zoom level closest to native resolution. Returns a float for the zoom -- so, use zoom.round if you want the closest zoom level, for example.
 
 
 ## Output
@@ -46,17 +59,8 @@ Tiles in the output folder with format
 `#{output_dir}/#{prefix}_#{zoom_level}_#{tile_col}_#{tile_row}.#{image_format}`
 
 
-## Options
-
-`zoom_levels` : Zoom level 0 shows the entire image as one 256x256 tile. Subsequent zoom levels double both the horizontal and vertical sides. Default is 0..4  
-`output_dir` : Defaults to the current directory. Don't include the ending '/'  
-`bg_color` : The background fill color, transparent by default.  
-`autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
-`format` : The format for the output, defaults to 'jpg'. Can be png, gif, etc.  
-`prefix` : Prefix for the output files. Defaults to 'tile'
-
 ## Other things
-* Requires rmagick.
+* Requires rmagick and ImageMagick.
 * Might not work on Windows as written -- change the '/' for the output to '\\'
 
 
