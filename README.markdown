@@ -16,6 +16,10 @@ For example
 
 #### From ruby
 
+Install the gem:  
+`gem install imagetiler`
+
+Use it in your code:
 `require 'imagetiler'
 t = Tiler.new  
 t.make_tiles(image_source, opts)`
