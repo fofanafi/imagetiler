@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
     "README.markdown",
      "Rakefile",
      "VERSION",
+     "imagetiler.gemspec",
      "imagetiler.rb"
   ]
   s.homepage = %q{http://github.com/fofanafi/imagetiler}
