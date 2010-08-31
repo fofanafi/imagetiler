@@ -1,10 +1,12 @@
 # imagetiler -- A simple tool to tile images.
 
-### Description
+----
+
+## Description
 
 imagetiler breaks up images into smaller tiles, suitable for use with Google Maps.
 
-### How to use
+## How to use
 
 #### From the command line
 
@@ -31,7 +33,7 @@ or
 Setting options in the get_tiles function sets them for that instance of Tiler.
 
 
-### Methods
+## Methods
 
 `make_tiles(image_source, opts)`  
 
@@ -39,29 +41,29 @@ Setting options in the get_tiles function sets them for that instance of Tiler.
 
 
 
-### Output
+## Output
 Tiles in the output folder with format  
 `#{output_dir}/#{prefix}_#{zoom_level}_#{tile_col}_#{tile_row}.#{image_format}`
 
 
-### Options
+## Options
 
-`zoom_levels` : Zoom level 0 shows the entire image as one 256x256 tile. Subsequent zoom levels double both the horizontal and vertical sides. Default is 0..4
+`zoom_levels` : Zoom level 0 shows the entire image as one 256x256 tile. Subsequent zoom levels double both the horizontal and vertical sides. Default is 0..4  
 `output_dir` : Defaults to the current directory. Don't include the ending '/'  
 `bg_color` : The background fill color, transparent by default.  
 `autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
-`format` : The format for the output, defaults to 'jpg'. Can be png, gif, etc.
+`format` : The format for the output, defaults to 'jpg'. Can be png, gif, etc.  
 `prefix` : Prefix for the output files. Defaults to 'tile'
 
-### Other things
+## Other things
 * Requires rmagick.
 * Might not work on Windows as written -- change the '/' for the output to '\\'
 
 
-### Credits
+## Credits
 This tiler is modified Guilhem's tile_image.rb tool, which is part of the ym4r project. The Tiler itself has been re-written, and TileParam is no longer used.  
 Thanks to Guilhem for the command-line portions and the sample ruby and rmagick code!
 
 
-### License
+## License
 imagetiler uses the MIT License.
