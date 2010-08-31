@@ -1,10 +1,7 @@
 # imagetiler -- A simple tool to tile images.
 
-----
+imagetiler is a simple command-line and ruby image tiler with support for multiple zoom levels and different image formats.
 
-## Description
-
-imagetiler breaks up images into smaller tiles, suitable for use with Google Maps.
 
 ## How to use
 
@@ -37,8 +34,7 @@ Setting options in the get_tiles function sets them for that instance of Tiler.
 
 `make_tiles(image_source, opts)`  
 
-`calc_native_res_zoom` : Calculates the zoom level closest to native resolution. Returns a float for the zoom -- so, use zoom.ceil if you want the higher zoom, for example
-
+`calc_native_res_zoom` : Calculates the zoom level closest to native resolution. Returns a float for the zoom -- so, use zoom.round if you want the closest zoom level, for example
 
 
 ## Output
