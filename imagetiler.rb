@@ -30,7 +30,7 @@ class Tiler
 
 	def initialize()
 		@zoom_levels = 0..4
-		@bg_color = Magick::Pixel.new(255,255,255,0)
+		@bg_color = Magick::Pixel.new(255,255,255,Magick::TransparentOpacity)
 		@format = "jpg"
 		@autocreate_dirs = true
 		@output_dir = "."
@@ -94,7 +94,6 @@ class Tiler
 	# is evenly divisible by the max number of tiles per side
 	def pad_image(image)
 		dimension_image = calc_side_length(image)
-		puts dimension_image
 		
 		bg_color = @bg_color
 		image_sq = Magick::Image.new(dimension_image, dimension_image) do
