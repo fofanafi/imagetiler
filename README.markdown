@@ -23,9 +23,9 @@ Install the gem:
 `gem install imagetiler`
 
 Use it in your code:  
-`require 'imagetiler'   
-t = Tiler.new   
-t.make_tiles(image_source, opts)`
+	require 'imagetiler' 
+	t = Tiler.new   
+	t.make_tiles(image_source, opts)
 
 `image_source` can be either a filename or an RMagick Image.
 
