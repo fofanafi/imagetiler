@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{imagetiler}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anna, Guilhem Vellut"]
-  s.date = %q{2010-09-02}
+  s.date = %q{2010-09-04}
   s.description = %q{imagetiler is a simple command-line and ruby image tiler with support for multiple zoom levels and different image formats.}
   s.email = %q{tanna22@gmail.com}
   s.extra_rdoc_files = [
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "imagetiler.gemspec",
-     "imagetiler.rb"
+     "lib/imagetiler.rb"
   ]
   s.homepage = %q{http://github.com/fofanafi/imagetiler}
   s.rdoc_options = ["--charset=UTF-8"]
