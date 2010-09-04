@@ -59,6 +59,7 @@ class Tiler
 		image_sq = pad_image(image)
 		image_length = image_sq.columns
 
+		# the actual tiling part!
 		zoom_levels.each do |zoom|
 			# get the number of tiles in each column and row
 			factor = 2 ** zoom
@@ -68,10 +69,14 @@ class Tiler
 
 			0.upto(factor-1) do |col|
 				0.upto(factor-1) do |row|
+
+					# cut tile
 					# Image.crop(x,y,width,height,toss offset information)
 					tile = image_sq.crop(col*tile_length, row*tile_length,
 															 tile_length, tile_length, true)
 					tile.resize!(TILE_SIZE,TILE_SIZE)
+
+					# output tile
 					tile.write("#{@output_dir}/#{prefix}_#{zoom}_#{col}_#{row}.#{@format}")
 				end
 			end
