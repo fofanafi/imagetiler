@@ -23,6 +23,7 @@ Install the gem:
 `gem install imagetiler`
 
 Use it in your code:  
+	require 'rubygems' # if you installed imagetiler as a gem
 	require 'imagetiler' 
 	t = Tiler.new   
 	t.make_tiles(image_source, opts)

@@ -31,7 +31,7 @@ class Tiler
 	def initialize()
 		@zoom_levels = 0..4
 		@bg_color = Magick::Pixel.new(255,255,255,Magick::TransparentOpacity)
-		@format = "jpg"
+		@format = "png"
 		@autocreate_dirs = true
 		@output_dir = "."
 		@prefix = "tile"
