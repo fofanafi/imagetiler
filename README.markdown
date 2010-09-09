@@ -44,7 +44,7 @@ If you set an option in get_tiles, that will be the new default for that instanc
 `output_dir` : Defaults to the current directory. Don't include the ending '/'  
 `bg_color` : The background fill color, transparent by default.  
 `autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
-`format` : The format for the output, defaults to 'jpg'. Can be png, gif, or anything that ImageMagick supports. 
+`format` : The format for the output, defaults to 'png'. Can be png, jpg, gif, or anything that ImageMagick supports. 
 `prefix` : Prefix for the output files. Defaults to 'tile'
 
 
