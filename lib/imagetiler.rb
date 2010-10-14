@@ -42,14 +42,9 @@ class Tiler
 
 		# initializing and setting options and stuff
 		image = get_image(image_source)
-		if opts[:zoom_levels]
-			@zoom_levels = opts[:zoom_levels]
-		end
-		if opts[:bg_color] then @bg_color = opts[:bg_color] end
-		if opts[:format] then @format = opts[:format] end
-		if opts[:autocreate_dirs] then @autocreate_dirs = opts[:autocreate_dirs] end
-		if opts[:output_dir] then @output_dir = opts[:output_dir] end
-		@prefix = opts[:prefix] if opts[:prefix]
+		opts.each_pair do |key,value|
+       instance_variable_set "@#{key}", value
+    end
 
 		if @autocreate_dirs
 			create_dir(output_dir)
@@ -77,7 +72,8 @@ class Tiler
 					tile.resize!(TILE_SIZE,TILE_SIZE)
 
 					# output tile
-					tile.write("#{@output_dir}/#{prefix}_#{zoom}_#{col}_#{row}.#{@format}")
+					filename = File.join(@output_dir, "#{prefix}_#{zoom}_#{col}_#{row}.#{@format}")
+					tile.write(filename)
 				end
 			end
 		end
@@ -98,14 +94,10 @@ class Tiler
 	# image is square and that the max number of pixels
 	# is evenly divisible by the max number of tiles per side
 	def pad_image(image)
-		dimension_image = calc_side_length(image)
+		dim = calc_side_length(image)
 		
-		bg_color = @bg_color
-		image_sq = Magick::Image.new(dimension_image, dimension_image) do
-			self.background_color = bg_color
-		end
-
-		image_sq.import_pixels(0,0,image.columns,image.rows,"RGBA",image.export_pixels(0,0,image.columns,image.rows,"RGBA"))
+		image.background_color = @bg_color
+		image.extent(dim, dim)
 	end
 
 	def get_image(image_source)

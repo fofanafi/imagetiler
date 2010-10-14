@@ -62,7 +62,6 @@ Tiles in the output folder with format
 
 ## Other things
 * Requires rmagick and ImageMagick.
-* Might not work on Windows as written -- change the '/' for the output to '\\'
 
 
 ## Credits
