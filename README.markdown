@@ -19,7 +19,7 @@ For example
 Install ImageMagick.
 
 Install the gem:  
-`gem install rmagick`  
+`gem install rmagick` (This step could be more involved.)
 `gem install imagetiler`
 
 Use it in your code:  
@@ -41,7 +41,7 @@ If you set an option in get_tiles, that will be the new default for that instanc
 ## Options
 
 `zoom_levels` : Zoom level 0 shows the entire image as one 256x256 tile. Subsequent zoom levels double both the horizontal and vertical sides. Default is 0..4  
-`output_dir` : Defaults to the current directory. Don't include the ending '/'  
+`output_dir` : Defaults to the current directory. 
 `bg_color` : The background fill color, transparent by default.  
 `autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
 `format` : The format for the output, defaults to 'png'. Can be png, jpg, gif, or anything that ImageMagick supports. 
