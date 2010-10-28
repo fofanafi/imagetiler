@@ -5,21 +5,22 @@ imagetiler is a simple command-line and ruby image tiler with support for multip
 
 ## How to use
 
+First install ImageMagick, then rmagick.
+
 ### From the command line
 
-`ruby tile_image.rb -o OUTPUT_DIR -z ZOOM_LEVELS IMAGE_FILE`  
+imagetiler.rb is in the lib directory.
+
+`ruby imagetiler.rb -o OUTPUT_DIR -z ZOOM_LEVELS IMAGE_FILE`  
 
 For example
 
-`ruby tile_image.rb -o ./tiles -z 2..4 ./input_files/map.jpg`
+`ruby imagetiler.rb -o ./tiles -z 2..4 ./input_files/map.jpg`
 
 
 ### From ruby
 
-Install ImageMagick.
-
 Install the gem:  
-`gem install rmagick` (This step could be more involved.)
 `gem install imagetiler`
 
 Use it in your code:  
@@ -44,7 +45,7 @@ If you set an option in get_tiles, that will be the new default for that instanc
 `output_dir` : Defaults to the current directory. 
 `bg_color` : The background fill color, transparent by default.  
 `autocreate_dirs` : Whether or not to create the directory if it exists. Default true  
-`format` : The format for the output, defaults to 'png'. Can be png, jpg, gif, or anything that ImageMagick supports. 
+`format` : The format for the output, defaults to 'png'. Can be png, jpg, gif, or anything that ImageMagick supports.   
 `prefix` : Prefix for the output files. Defaults to 'tile'
 
 

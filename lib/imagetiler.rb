@@ -65,6 +65,8 @@ class Tiler
 			0.upto(factor-1) do |col|
 				0.upto(factor-1) do |row|
 
+					puts "Cutting tiles for zoom level #{zoom}"
+
 					# cut tile
 					# Image.crop(x,y,width,height,toss offset information)
 					tile = image_sq.crop(col*tile_length, row*tile_length,
@@ -95,8 +97,10 @@ class Tiler
 	# is evenly divisible by the max number of tiles per side
 	def pad_image(image)
 		dim = calc_side_length(image)
-		
+	
 		image.background_color = @bg_color
+		
+		puts "padding image"
 		image.extent(dim, dim)
 	end
 
